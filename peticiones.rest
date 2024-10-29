@@ -1,0 +1,79 @@
+@host = http://localhost:3000
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoiNjcyMDljMTdkZmJiNjljODNkZGFjNjA5IiwidXN1YXJpb19yb2xlIjoicmVndWxhciIsImlhdCI6MTczMDE5MDU3M30.GeN74Q-FFg4SsVLqm9tuAlPhdIYUguSqX1CrS2RH004
+
+### USUARIOS ###
+
+### Get User Profile
+GET {{host}}/api/users/profile
+Authorization: {{token}}
+
+### Register
+POST {{host}}/api/users/register
+Content-Type: application/json
+
+{
+    "name": "Sara",
+    "email": "sara@gmail.com",
+    "password": "123456"
+}
+
+### Login
+POST {{host}}/api/users/login
+Content-Type: application/json
+
+{
+    "email": "sara@gmail.com",
+    "password": "123456"
+}
+
+### Add Product to Cart
+PUT {{host}}/api/users/add/671b8d95177c46e9b7e671fc
+Authorization: {{token}}
+
+//////////////////////////////////////////////////
+
+### PRODUCTOS ###
+
+### Get All
+GET {{host}}/api/products
+
+### Get By ID
+GET {{host}}/api/products/671b89f084a3b8cf404fd36a
+
+### Get By Department
+GET {{host}}/api/products/dpt/Moda
+
+### Get Available
+GET {{host}}/api/products/available
+
+### Get By Price
+GET {{host}}/api/products/price?min=100&max=200
+
+###
+POST {{host}}/api/products
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "name": "Botella de Coca-Cola",
+    "description": "Botella de Coca-COla de 1 litro",
+    "department": "Alimentos",
+    "price": 5,
+    "stock": 10,
+    "available": true
+}
+
+###
+PUT {{host}}/api/products/
+
+Content-Type: application/json
+
+{
+    "price": 30,
+    "stock": 300
+}
+
+###
+DELETE {{host}}/api/products/671f5ba59d05e3d276c5d8
+
+//////////////////////////////////////////////////
