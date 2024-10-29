@@ -36,7 +36,7 @@ const loginUser = async (req, res, next) => {
 
 
         res.json({
-            Message: 'Login correcto',
+            Message: '🚀 Login correcto 🚀 ',
             token: createToken(user)
         })
     } catch (error) {
@@ -60,5 +60,3 @@ const getUserProfile = async (req, res, next) => {
 }
 
 module.exports = { registerUser, loginUser, addProductToCart, getUserProfile }
-
-

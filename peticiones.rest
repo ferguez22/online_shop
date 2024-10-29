@@ -1,4 +1,4 @@
-@host = http://localhost:3000
+@host = https://online-shop-twk7.onrender.com
 @token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoiNjcyMDljMTdkZmJiNjljODNkZGFjNjA5IiwidXN1YXJpb19yb2xlIjoicmVndWxhciIsImlhdCI6MTczMDE5MDU3M30.GeN74Q-FFg4SsVLqm9tuAlPhdIYUguSqX1CrS2RH004
 
 ### USUARIOS ###
